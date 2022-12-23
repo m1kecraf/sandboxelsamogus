@@ -56,7 +56,7 @@ elements.amogus = {
 elements.amogus_seed = {
 	name: "Amogus Seed",
 	color: "#df2f47",
-	cooldown: 6,
+	cooldown: 1,
 	behavior: [
 		"DL:amogus_seed|DL:amogus_seed AND M2|DL:amogus_seed",
 		"DL:amogus_seed|C2:amogus|DL:amogus_seed",
