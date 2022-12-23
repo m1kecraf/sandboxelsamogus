@@ -30,16 +30,16 @@ elements.amogus = {
 		for (let j = cc; j < dd; j++) { //Iterative placing and coloring of pixels
 			for (let i = aa; i < bb; i++) {
 				if(!isEmpty(pixel.x+i,pixel.y+j,true)) {
-					if( __get$(__get$(pixel.arr,j+nc),i+na)  !== "null") {
+					if(pixel.arr[j+nc][i+na] !== "null") {
 						deletePixel(pixel.x+i,pixel.y+j)
 					}
 				}
-				if( __get$(__get$(pixel.arr,j+nc),i+na) ) {
-					if(isEmpty(pixel.x+i,pixel.y+j,false) &&  __get$(__get$(pixel.arr,j+nc),i+na)  !== "null" &&  __get$(__get$(pixel.arr,j+nc),i+na)  !== "air") {
-						createPixel( __get$(__get$(pixel.arr,j+nc),i+na) ,pixel.x+i,pixel.y+j)
-						if( __get$(__get$(pixel.carr,j+nc),i+na) ) {
-							if(!isEmpty(pixel.x+i,pixel.y+j,true) &&  __get$(__get$(pixel.carr,j+nc),i+na)  != "null") {
-								 __get$(__get$(pixelMap,pixel.x+i),pixel.y+j) .color =  __get$(__get$(pixel.carr,j+nc),i+na) 
+				if(pixel.arr[j+nc][i+na]) {
+					if(isEmpty(pixel.x+i,pixel.y+j,false) && pixel.arr[j+nc][i+na] !== "null" && pixel.arr[j+nc][i+na] !== "air") {
+						createPixel(pixel.arr[j+nc][i+na],pixel.x+i,pixel.y+j)
+						if(pixel.carr[j+nc][i+na]) {
+							if(!isEmpty(pixel.x+i,pixel.y+j,true) && pixel.carr[j+nc][i+na] != "null") {
+								pixelMap[pixel.x+i][pixel.y+j].color = pixel.carr[j+nc][i+na]
 							}
 						}
 					}
